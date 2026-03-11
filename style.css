@@ -1,0 +1,86 @@
+:root{
+    --bgclr: rgb(132, 101, 241);
+    --bordrad: 14px;
+    --bordclr: #7fb7c9;
+    --txtclr: rgb(51, 27, 37);
+    --secondclr:white;
+}
+*{margin:0; padding: 0; font-family: sans-serif; box-sizing: border-box;}
+body{ width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: black;}
+/**/
+.box{
+    background-color: var(--bgclr);
+    padding: 30px;
+    width: 600px;
+    border-radius: var(--bordrad);
+    max-width: 90%;
+      /* display: flex; flex-direction: column; align-items: center; */
+}
+.qr-header *{
+    margin-block: 5px ; font-weight: 600;
+}
+.qr-header h1{
+    text-align: center; margin-bottom: 24px; color: var(--txtclr);
+    font-size:26px; text-transform: uppercase;
+}
+.qr-header input{
+    width: 100%; margin-block: 5px;
+}
+.qr-header input,select{
+    padding: 8px;
+    border-radius: var(--bordrad);
+    font-size:18px; outline: none;
+    border: 2px solid var(--bordclr);
+}
+.qr-header label{ font-weight: 500; color: white; font-size: 20px;} 
+.qr-header div{
+    display: flex;
+    justify-content: space-between;
+}
+.qr-body{ padding: 10px;}
+.qr-footer{
+    margin-top:30px; 
+    display: flex; 
+    justify-content: center;
+    /**/
+    position: relative; bottom: 0px; left: 0px;
+}
+
+.qr-footer a{
+    color: var(--bgclr);
+    background-color: var(--secondclr);
+    text-decoration:none ; 
+    padding: 14px 36px;
+    font-size: 20px; 
+    font-weight: 600;
+    margin-inline: 50px;
+    font-weight: 600;
+    border-radius: var(--bordrad);
+}
+
+.qr-body{
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.qr-body img{
+    max-width: 100%; max-height: 100%;
+    margin-block: 10px; padding: 20px;
+    border: 0.5px solid white;
+    border-radius: var(--bordrad);
+}
+
+@media screen and (max-width:520px),(max-height:700px) {
+    .qr-footer a{
+        transform: scale(calc(8vw));
+        margin:5px;
+        padding: 10px;
+    }
+    .qr-header select{
+        padding: 4px; transform: scale(0.7);
+    }
+    .box{
+        transform: scale(0.85);
+    }
+}
